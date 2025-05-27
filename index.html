@@ -132,6 +132,20 @@
         .additional-info-card p {
             font-size: 0.95rem; /* Ujednolicony rozmiar tekstu w kartach dodatkowych info */
         }
+        .map-container {
+            margin-top: 3rem; /* Odstęp mapy od poprzedniej sekcji */
+            margin-bottom: 3rem; /* Odstęp mapy od stopki */
+            border-radius: 12px;
+            overflow: hidden; /* Aby zaokrąglić rogi iframe */
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            border: 1px solid #f3efea;
+        }
+        .map-container iframe {
+            display: block; /* Usuwa domyślny odstęp pod iframe */
+            width: 100%;
+            height: 450px; /* Można dostosować wysokość */
+            border: 0;
+        }
     </style>
 </head>
 <body class="text-gray-700 antialiased">
@@ -196,6 +210,20 @@
             </div>
         </div>
 
+        <div class="mt-20 mb-16">
+            <div class="text-center mb-10">
+                <h2 id="mapTitle" class="font-display text-3xl section-title mb-2">Mapa Lokalizacji</h2>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/d/u/0/edit?mid=1PI856Z02GNUsRaculcamqDZZh8EkXmA&usp=sharing"  
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
         <footer class="text-center mt-20 py-12 border-t border-gray-200"> <p id="footerText" class="font-display footer-text mb-3">Nie możemy się już doczekać!</p>
             <p id="footerNames" class="font-display footer-names mt-1">Maja & Igor</p>
         </footer>
@@ -227,6 +255,7 @@
                 info3Title: "Uroczystość Bezalkoholowa",
                 info3DescP1: "Podjęliśmy decyzję, że nasza uroczystość będzie bezalkoholowa.",
                 info3DescP2: "Dziękujemy za uszanowanie naszego wyboru.",
+                mapTitle: "Mapa Lokalizacji",
                 footerText: "Nie możemy się już doczekać!",
                 footerNames: "Maja & Igor"
             },
@@ -235,11 +264,11 @@
                 headerNames: "Maja & Igor",
                 headerDate: "June 12, 2025",
                 event1Title: "3:30 PM – Wedding Ceremony",
-                event1Desc1: "The wedding ceremony will take place at the Amsterdam Stadsloket Oost Civil Registry Office. The ceremony will last 10-15 minutes. In addition to the witnesses and our family, a photographer will accompany us.<br>Please arrive about fifteen minutes earlier (3:15 PM).", // Dodano <br>
+                event1Desc1: "The wedding ceremony will take place at the Amsterdam Stadsloket Oost Civil Registry Office. The ceremony will last 10-15 minutes. In addition to the witnesses and our family, a photographer will accompany us.<br>Please arrive about fifteen minutes earlier (3:15 PM).",
                 event1Desc2: "Address: Oranje-Vrijstaatplein 2, 1091 HR Amsterdam",
                 event1MapBtn: "View on map",
                 event2Title: "After the Ceremony – Coffee & Sweets",
-                event2Desc1: "After the official part, we will take a short walk together to the charming Badeta Koffiebranders café.<br>With aromatic coffee and delicious sweets, we can enjoy our time together.", // Dodano <br>
+                event2Desc1: "After the official part, we will take a short walk together to the charming Badeta Koffiebranders café.<br>With aromatic coffee and delicious sweets, we can enjoy our time together.",
                 event2Desc2: "Address: Tweede Laurierdwarsstraat 24H, 1016 RB Amsterdam",
                 event2MapBtn: "View on map",
                 event3Title: "6:00 PM – Wedding Dinner",
@@ -254,6 +283,7 @@
                 info3Title: "Alcohol-Free Celebration",
                 info3DescP1: "We have decided that our celebration will be alcohol-free.",
                 info3DescP2: "We appreciate your understanding and respecting our choice.",
+                mapTitle: "Location Map",
                 footerText: "We can't wait to see you!",
                 footerNames: "Maja & Igor"
             }
@@ -266,31 +296,31 @@
             document.getElementById('headerDate').textContent = translations[lang].headerDate;
 
             document.getElementById('event1Title').textContent = translations[lang].event1Title;
-            // Zmieniono na innerHTML, aby <br> działało
             document.getElementById('event1Desc1').innerHTML = translations[lang].event1Desc1; 
             document.getElementById('event1Desc2').textContent = translations[lang].event1Desc2;
             document.getElementById('event1MapBtn').textContent = translations[lang].event1MapBtn;
 
             document.getElementById('event2Title').textContent = translations[lang].event2Title;
-            // Zmieniono na innerHTML, aby <br> działało
             document.getElementById('event2Desc1').innerHTML = translations[lang].event2Desc1; 
             document.getElementById('event2Desc2').textContent = translations[lang].event2Desc2;
             document.getElementById('event2MapBtn').textContent = translations[lang].event2MapBtn;
 
             document.getElementById('event3Title').textContent = translations[lang].event3Title;
-            document.getElementById('event3Desc1').innerHTML = translations[lang].event3Desc1; // Użycie innerHTML dla spójności, chociaż tutaj nie ma <br>
+            document.getElementById('event3Desc1').innerHTML = translations[lang].event3Desc1; 
             document.getElementById('event3Desc2').textContent = translations[lang].event3Desc2;
             document.getElementById('event3MapBtn').textContent = translations[lang].event3MapBtn;
 
             document.getElementById('additionalInfoTitle').textContent = translations[lang].additionalInfoTitle;
             document.getElementById('info1Title').textContent = translations[lang].info1Title;
-            document.getElementById('info1Desc').innerHTML = translations[lang].info1Desc; // Użycie innerHTML dla spójności
+            document.getElementById('info1Desc').innerHTML = translations[lang].info1Desc; 
             document.getElementById('info2Title').textContent = translations[lang].info2Title;
-            document.getElementById('info2Desc').innerHTML = translations[lang].info2Desc; // Użycie innerHTML dla spójności
+            document.getElementById('info2Desc').innerHTML = translations[lang].info2Desc; 
             document.getElementById('info3Title').textContent = translations[lang].info3Title;
-            document.getElementById('info3DescP1').innerHTML = translations[lang].info3DescP1; // Użycie innerHTML dla spójności
-            document.getElementById('info3DescP2').innerHTML = translations[lang].info3DescP2; // Użycie innerHTML dla spójności
+            document.getElementById('info3DescP1').innerHTML = translations[lang].info3DescP1; 
+            document.getElementById('info3DescP2').innerHTML = translations[lang].info3DescP2; 
             
+            document.getElementById('mapTitle').textContent = translations[lang].mapTitle;
+
             document.getElementById('footerText').textContent = translations[lang].footerText;
             document.getElementById('footerNames').textContent = translations[lang].footerNames;
 
