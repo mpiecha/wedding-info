@@ -25,31 +25,14 @@
             box-shadow: 0 4px 18px rgba(0,0,0,0.05); /* Subtelny, ale wyraźniejszy cień */
             border: 1px solid #f3efea; /* Bardzo delikatna ramka */
         }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -10px; /* Lekko odsunięta kropka dla lepszego wyglądu */
-            top: 1rem; /* Dopasowanie do wysokości nagłówka */
-            width: 20px; /* Nieco większa kropka */
-            height: 20px;
-            background-color: #c8a07d; /* Główny kolor akcentu, lekko przygaszony */
-            border-radius: 50%;
-            border: 4px solid #fdf9f6;
-            z-index: 1;
-        }
-        .timeline-line {
-            position: absolute;
-            left: 0;
-            top: 1rem; /* Start linii na wysokości kropki */
-            bottom: 0;
-            width: 2px;
-            background-color: #e0d8d0; /* Kolor linii czasu, bardziej stonowany */
-        }
+        /* Usunięto style dla .timeline-item::before */
+        /* Usunięto style dla .timeline-line */
+
         .timeline-event-title {
             font-size: 1.5rem; /* Wyraźniejszy nagłówek wydarzenia */
             color: #7a5c44; /* Ciemniejszy, ciepły brąz dla nagłówków */
             margin-bottom: 0.75rem;
-            position: relative;
+            /* Usunięto position: relative, jeśli nie jest już potrzebne bez ::before */
         }
         .btn-link {
             background-color: #c8a07d;
@@ -161,10 +144,8 @@
             <svg class="header-heart" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         </header>
 
-        <div class="relative pl-10"> <div class="timeline-line"></div>
-
-            <div class="mb-10 card timeline-item">
-                <h3 id="event1Title" class="timeline-event-title">
+        <div> 
+            <div class="mb-10 card"> <h3 id="event1Title" class="timeline-event-title">
                     15:30 – Ślub
                 </h3>
                 <p id="event1Desc1" class="mb-3 text-sm leading-relaxed">Ślub odbędzie się w Urzędzie Stanu Cywilnego Amsterdam Stadsloket Oost. Ceremonia potrwa 10-15 minut. Oprócz świadków i naszej rodziny będzie nam towarzyszył fotograf. Prosimy o przybycie na miejsce około kwadrans wcześniej (15:15).</p>
@@ -172,8 +153,7 @@
                 <a href="https://maps.app.goo.gl/dnkFJ5VKc8h9ztNn9" target="_blank" class="btn-link" id="event1MapBtn">Zobacz na mapie</a>
             </div>
 
-            <div class="mb-10 card timeline-item">
-                <h3 id="event2Title" class="timeline-event-title">
+            <div class="mb-10 card"> <h3 id="event2Title" class="timeline-event-title">
                     Po ceremonii – Kawa i Słodkości
                 </h3>
                 <p id="event2Desc1" class="mb-3 text-sm leading-relaxed">Po oficjalnej części udamy się na krótki, wspólny spacer do urokliwej kawiarni Badeta Koffiebranders. Przy aromatycznej kawie i słodkościach, będziemy mogli nacieszyć się wspólnie spędzonym czasem.</p>
@@ -181,8 +161,7 @@
                 <a href="https://maps.app.goo.gl/9Jm7gh3bGijKvJMd6" target="_blank" class="btn-link" id="event2MapBtn">Zobacz na mapie</a>
             </div>
 
-            <div class="mb-10 card timeline-item">
-                <h3 id="event3Title" class="timeline-event-title">
+            <div class="mb-10 card"> <h3 id="event3Title" class="timeline-event-title">
                     18:00 – Uroczysta Kolacja
                 </h3>
                 <p id="event3Desc1" class="mb-3 text-sm leading-relaxed">Wieczorem zapraszamy Was na dalsze świętowanie przy wspólnej kolacji w restauracji De Kas. Restauracja co tydzień serwuje nowe menu degustacyjne, więc kolacja będzie miłym zaskoczeniem dla nas wszystkich!</p>
@@ -216,7 +195,7 @@
             </div>
             <div class="map-container">
                 <iframe 
-                    src="https://www.google.com/maps/d/u/0/edit?mid=1PI856Z02GNUsRaculcamqDZZh8EkXmA&usp=sharing"  
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1PI856Z02GNUsRaculcamqDZZh8EkXmA&ehbc=2E312F"
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
