@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">Nasze Ślubne Chwile - Maja i Igor</title>
+    <title id="pageTitle">Wedding info</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
@@ -242,7 +242,7 @@
                 event2Desc1: "After the official part, we will take a short walk together to the charming Badeta Koffiebranders café. With aromatic coffee and delicious sweets, we can enjoy our time together.",
                 event2Desc2: "Address: Tweede Laurierdwarsstraat 24H, 1016 RB Amsterdam",
                 event2MapBtn: "View on map",
-                event3Title: "6:00 PM – Celebratory Dinner",
+                event3Title: "6:00 PM – Wedding Dinner", // Zmieniony tekst
                 event3Desc1: "In the evening, we invite you to continue celebrating with a dinner at De Kas restaurant. The restaurant serves a new tasting menu every week, so dinner will be a pleasant surprise for all of us!",
                 event3Desc2: "Address: Kamerlingh Onneslaan 3, 1097 DE Amsterdam (approx. 10 minutes walk from the café)",
                 event3MapBtn: "View on map",
@@ -267,14 +267,17 @@
 
             document.getElementById('event1Title').textContent = translations[lang].event1Title;
             document.getElementById('event1Desc1').textContent = translations[lang].event1Desc1;
+            document.getElementById('event1Desc2').textContent = translations[lang].event1Desc2;
             document.getElementById('event1MapBtn').textContent = translations[lang].event1MapBtn;
 
             document.getElementById('event2Title').textContent = translations[lang].event2Title;
             document.getElementById('event2Desc1').textContent = translations[lang].event2Desc1;
+            document.getElementById('event2Desc2').textContent = translations[lang].event2Desc2;
             document.getElementById('event2MapBtn').textContent = translations[lang].event2MapBtn;
 
             document.getElementById('event3Title').textContent = translations[lang].event3Title;
             document.getElementById('event3Desc1').textContent = translations[lang].event3Desc1;
+            document.getElementById('event3Desc2').textContent = translations[lang].event3Desc2;
             document.getElementById('event3MapBtn').textContent = translations[lang].event3MapBtn;
 
             document.getElementById('additionalInfoTitle').textContent = translations[lang].additionalInfoTitle;
@@ -283,7 +286,6 @@
             document.getElementById('info2Title').textContent = translations[lang].info2Title;
             document.getElementById('info2Desc').textContent = translations[lang].info2Desc;
             document.getElementById('info3Title').textContent = translations[lang].info3Title;
-            // Dla sekcji o uroczystości bezalkoholowej, teraz są dwa osobne paragrafy
             document.getElementById('info3DescP1').textContent = translations[lang].info3DescP1;
             document.getElementById('info3DescP2').textContent = translations[lang].info3DescP2;
             
