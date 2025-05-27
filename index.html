@@ -153,7 +153,7 @@
                 <h3 id="event1Title" class="timeline-event-title">
                     15:30 – Ślub
                 </h3>
-                <p id="event1Desc1" class="mb-3 text-sm leading-relaxed">Ślub odbędzie się w Urzędzie Stanu Cywilnego Amsterdam Stadsloket Oost. Prosimy o przybycie na miejsce około kwadrans wcześniej (15:15).</p>
+                <p id="event1Desc1" class="mb-3 text-sm leading-relaxed">Ślub odbędzie się w Urzędzie Stanu Cywilnego Amsterdam Stadsloket Oost. Ceremonia potrwa 10-15 minut. Oprócz świadków i naszej rodziny będzie nam towarzyszył fotograf. Prosimy o przybycie na miejsce około kwadrans wcześniej (15:15).</p>
                 <p id="event1Desc2" class="mb-3 text-xs text-gray-500">Adres: Oranje-Vrijstaatplein 2, 1091 HR Amsterdam</p>
                 <a href="https://maps.app.goo.gl/dnkFJ5VKc8h9ztNn9" target="_blank" class="btn-link" id="event1MapBtn">Zobacz na mapie</a>
             </div>
@@ -190,7 +190,7 @@
                 </div>
                 <div class="card text-center additional-info-card">
                     <h4 id="info3Title" class="font-display mb-3 text-gray-800">Uroczystość Bezalkoholowa</h4>
-                    <p id="info3DescP1" class="leading-relaxed">Podjęliśmy decyzję, aby nasza uroczystość była bezalkoholowa.</p>
+                    <p id="info3DescP1" class="leading-relaxed">Podjęliśmy decyzję, że nasza uroczystość będzie bezalkoholowa.</p>
                     <p id="info3DescP2" class="leading-relaxed">Dziękujemy za uszanowanie naszego wyboru.</p>
                 </div>
             </div>
@@ -208,7 +208,7 @@
                 headerNames: "Maja & Igor",
                 headerDate: "12 czerwca 2025",
                 event1Title: "15:30 – Ślub",
-                event1Desc1: "Ślub odbędzie się w Urzędzie Stanu Cywilnego Amsterdam Stadsloket Oost. Prosimy o przybycie na miejsce około kwadrans wcześniej (15:15).",
+                event1Desc1: "Ślub odbędzie się w Urzędzie Stanu Cywilnego Amsterdam Stadsloket Oost. Ceremonia potrwa 10-15 minut. Oprócz świadków i naszej rodziny będzie nam towarzyszył fotograf. Prosimy o przybycie na miejsce około kwadrans wcześniej (15:15).",
                 event1Desc2: "Adres: Oranje-Vrijstaatplein 2, 1091 HR Amsterdam",
                 event1MapBtn: "Zobacz na mapie",
                 event2Title: "Po ceremonii – Kawa i Słodkości",
@@ -225,7 +225,7 @@
                 info2Title: "Restrykcje żywieniowe",
                 info2Desc: "Prosimy o wcześniejszą informację o alergiach i restrykcjach żywieniowych.",
                 info3Title: "Uroczystość Bezalkoholowa",
-                info3DescP1: "Podjęliśmy decyzję, aby nasza uroczystość była bezalkoholowa.",
+                info3DescP1: "Podjęliśmy decyzję, że nasza uroczystość będzie bezalkoholowa.",
                 info3DescP2: "Dziękujemy za uszanowanie naszego wyboru.",
                 footerText: "Nie możemy się już doczekać!",
                 footerNames: "Maja & Igor"
@@ -235,16 +235,16 @@
                 headerNames: "Maja & Igor",
                 headerDate: "June 12, 2025",
                 event1Title: "3:30 PM – Wedding Ceremony",
-                event1Desc1: "The wedding ceremony will take place at the Amsterdam Stadsloket Oost Civil Registry Office. Please arrive about fifteen minutes earlier (3:15 PM).",
+                event1Desc1: "The wedding ceremony will take place at the Amsterdam Stadsloket Oost Civil Registry Office. The ceremony will last 10-15 minutes. In addition to the witnesses and our family, a photographer will accompany us.<br>Please arrive about fifteen minutes earlier (3:15 PM).", // Dodano <br>
                 event1Desc2: "Address: Oranje-Vrijstaatplein 2, 1091 HR Amsterdam",
                 event1MapBtn: "View on map",
                 event2Title: "After the Ceremony – Coffee & Sweets",
-                event2Desc1: "After the official part, we will take a short walk together to the charming Badeta Koffiebranders café. With aromatic coffee and delicious sweets, we can enjoy our time together.",
+                event2Desc1: "After the official part, we will take a short walk together to the charming Badeta Koffiebranders café.<br>With aromatic coffee and delicious sweets, we can enjoy our time together.", // Dodano <br>
                 event2Desc2: "Address: Tweede Laurierdwarsstraat 24H, 1016 RB Amsterdam",
                 event2MapBtn: "View on map",
-                event3Title: "6:00 PM – Wedding Dinner", // Zmieniony tekst
+                event3Title: "6:00 PM – Wedding Dinner",
                 event3Desc1: "In the evening, we invite you to continue celebrating with a dinner at De Kas restaurant. The restaurant serves a new tasting menu every week, so dinner will be a pleasant surprise for all of us!",
-                event3Desc2: "Address: Kamerlingh Onneslaan 3, 1097 DE Amsterdam (approx. 10 minutes walk from the café)",
+                event3Desc2: "Address: Kamerlingh Onneslaan 3, 1097 DE Amsterdam (approx. 10 minutes walk from the café)", 
                 event3MapBtn: "View on map",
                 additionalInfoTitle: "Additional Information",
                 info1Title: "Dress Code",
@@ -252,7 +252,7 @@
                 info2Title: "Dietary Restrictions",
                 info2Desc: "Please inform us in advance about any allergies and dietary restrictions.",
                 info3Title: "Alcohol-Free Celebration",
-                info3DescP1: "We have decided to have an alcohol-free celebration.",
+                info3DescP1: "We have decided that our celebration will be alcohol-free.",
                 info3DescP2: "We appreciate your understanding and respecting our choice.",
                 footerText: "We can't wait to see you!",
                 footerNames: "Maja & Igor"
@@ -266,28 +266,30 @@
             document.getElementById('headerDate').textContent = translations[lang].headerDate;
 
             document.getElementById('event1Title').textContent = translations[lang].event1Title;
-            document.getElementById('event1Desc1').textContent = translations[lang].event1Desc1;
+            // Zmieniono na innerHTML, aby <br> działało
+            document.getElementById('event1Desc1').innerHTML = translations[lang].event1Desc1; 
             document.getElementById('event1Desc2').textContent = translations[lang].event1Desc2;
             document.getElementById('event1MapBtn').textContent = translations[lang].event1MapBtn;
 
             document.getElementById('event2Title').textContent = translations[lang].event2Title;
-            document.getElementById('event2Desc1').textContent = translations[lang].event2Desc1;
+            // Zmieniono na innerHTML, aby <br> działało
+            document.getElementById('event2Desc1').innerHTML = translations[lang].event2Desc1; 
             document.getElementById('event2Desc2').textContent = translations[lang].event2Desc2;
             document.getElementById('event2MapBtn').textContent = translations[lang].event2MapBtn;
 
             document.getElementById('event3Title').textContent = translations[lang].event3Title;
-            document.getElementById('event3Desc1').textContent = translations[lang].event3Desc1;
+            document.getElementById('event3Desc1').innerHTML = translations[lang].event3Desc1; // Użycie innerHTML dla spójności, chociaż tutaj nie ma <br>
             document.getElementById('event3Desc2').textContent = translations[lang].event3Desc2;
             document.getElementById('event3MapBtn').textContent = translations[lang].event3MapBtn;
 
             document.getElementById('additionalInfoTitle').textContent = translations[lang].additionalInfoTitle;
             document.getElementById('info1Title').textContent = translations[lang].info1Title;
-            document.getElementById('info1Desc').textContent = translations[lang].info1Desc;
+            document.getElementById('info1Desc').innerHTML = translations[lang].info1Desc; // Użycie innerHTML dla spójności
             document.getElementById('info2Title').textContent = translations[lang].info2Title;
-            document.getElementById('info2Desc').textContent = translations[lang].info2Desc;
+            document.getElementById('info2Desc').innerHTML = translations[lang].info2Desc; // Użycie innerHTML dla spójności
             document.getElementById('info3Title').textContent = translations[lang].info3Title;
-            document.getElementById('info3DescP1').textContent = translations[lang].info3DescP1;
-            document.getElementById('info3DescP2').textContent = translations[lang].info3DescP2;
+            document.getElementById('info3DescP1').innerHTML = translations[lang].info3DescP1; // Użycie innerHTML dla spójności
+            document.getElementById('info3DescP2').innerHTML = translations[lang].info3DescP2; // Użycie innerHTML dla spójności
             
             document.getElementById('footerText').textContent = translations[lang].footerText;
             document.getElementById('footerNames').textContent = translations[lang].footerNames;
